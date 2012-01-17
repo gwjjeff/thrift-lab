@@ -7,7 +7,7 @@ var users = {};
 
 var server = thrift.createServer(UserStorage, {
   store: function(user, success) {
-    console.log("server stored:", user.uid);
+    console.log("server stored:", user);
     users[user.uid] = user;
     success();
   },
